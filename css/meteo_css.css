@@ -1,0 +1,37 @@
+@media screen and (max-width: 480px)
+{
+    .w3-top
+    {
+        display: block;
+        width: 100%;
+    }
+}
+
+
+.logo_site {
+  width: 35px;
+	height: 35px;
+	height: auto;
+}
+
+.oops_logo {
+  width: 100px;
+	height: 100px;
+	height: auto;
+}
+
+
+.hidden { visibility: hidden; }
+.unhidden { visibility: visible; }
+
+
+.footer {
+   position:absolute;
+   bottom:0;
+   width:100%;
+
+}
+
+div#bouton{
+    display:inline-block;
+}

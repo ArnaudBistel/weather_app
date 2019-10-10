@@ -1,0 +1,130 @@
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+
+  <!-- CSS -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./css/meteo_css.css"/>
+  <link rel="stylesheet" href="./css/w3.css">
+
+  <!-- JAVASCRIPT -->
+  <script type="text/javascript" src="./script/javascript.js"></script>
+</head>
+
+
+<body>
+
+  <!-- Header du site -->
+  <header>
+    <div class="w3-top">
+      <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+        <a href="./index.html" class="w3-bar-item w3-button"><img class="logo_site" src="./img/logo_site.png" alt="Logo"/> Météo</a>
+        <!-- Float links to the right. Hide them on small screens -->
+        <div class="w3-right w3-hide-small w3-bar-item">
+          <a href="./index.html" class="w3-bar-item w3-button">Accueil</a>
+          <a href="./view/contact.html" class="w3-bar-item w3-button">Contact</a>
+          <a href="./view/aide.html" class="w3-bar-item w3-button">Aide</a>
+        </div>
+      </div>
+    </div>
+  </header>file:///ubs/fukuisaurus/home.1/7/e1703977/M4103-4104/TP1-meteo-new-new/TP1/index.html
+
+  <!-- Contenu de la page -->
+  <section>
+    <div class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
+      <div class="w3-content w3-padding-32">
+        <div class="w3-container w3-padding-32" id="projects">
+          <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Prévisions du jour</h3>
+        </div>
+
+        <div id="main_div" align="center">
+          <div class="w3-display-container">
+
+            <form name="form" action="" >
+              <input class="w3-input w3-border" type="texte" name="ville" placeholder = "Saisir une ville" autofocus autocomplete="off">
+              <input type="button" button class="w3-button w3-black w3-section" name="bouton" value="Chercher" onclick="checker_ville(this.form)">
+            </form>
+
+            <table class="w3-table w3-table-all w3-bordered hidden" id="tableau" width="100%" >
+                     <tr>
+                       <td width="60%"  onclick="etendre_tableau()">
+                         <p>
+                           <div id = "text"></div>
+                         </p>
+                       </td>
+                       <th width="20%"  onclick="etendre_tableau()">
+                         <p class="flotte">
+                           <img id = "logo"></img>
+                         </p>
+                       </th>
+                       <th width="20%">
+                           <button class="w3-button w3-black w3-section" id="voir_plus" type="submit" onclick="etendre_tableau()">
+                             <i class="fa fa-paper-plane"></i> Voir plus
+                           </button>
+                       </th>
+                     </tr>
+            </table>
+            <!-- affichage en cas d'erreur de saisie -->
+            <label id="error" class="hidden">
+              <p class="flotte">
+                <img id = "error_logo"></img>
+              </p>
+
+              <p>
+                <div id = "error_text"></div>
+              </p>
+            </label>
+            <table class="w3-table w3-table-all w3-bordered hidden" id="tableau_etendu" width="100%" >
+                     <tr>
+                       <td>Longitude</td>
+                       <td id="long"></td>
+                     </tr>
+                     <tr>
+                       <td>Latitude</td>
+                       <td id="lat"></td>
+                     </tr>
+                     <tr>
+                       <td>Pression atmosphérique</td>
+                       <td id="pression"></td>
+                     </tr>
+                     <tr>
+                       <td>Humidité</td>
+                       <td id="hum"></td>
+                     </tr>
+                     <tr>
+                       <td>Température maximale</td>
+                       <td id="temp_max"></td>
+                     </tr>
+                     </tr>
+                     <tr>
+                       <td>Température minimale</td>
+                       <td id="temp_min"></td>
+                     </tr>
+                     <tr>
+                       <td>Visibilité</td>
+                       <td id="visibilite"></td>
+                     </tr>
+                     <tr>
+                       <td>Nuages</td>
+                       <td id="clouds"></td>
+                     </tr>
+                     </tr>
+                     <tr>
+                       <td>Vitesse du vent</td>
+                       <td id="vent"></td>
+                     </tr>
+            </table>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="w3-center w3-black w3-padding-16  footer">
+    <p>Powered by Arnaud Bistel and <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+  </footer>
+
+</body>
+</html>
